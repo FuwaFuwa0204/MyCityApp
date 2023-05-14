@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">MyCityApp</string>
+    <string name="city_name">๑•‿•๑ 청주 핫플레이스 추천 ๑•‿•๑</string>
+
+    <string name="ca1">음식점,카페</string>
+    <string name="ca2">야외활동장소</string>
+    <string name="ca3">쇼핑센터</string>
+
+    <string name="food1">쫄쫄호떡</string>
+    <string name="food1_des">충북 청주시 상당구 상당로55번길 40-1</string>
+    <string name="food2">백로식당</string>
+    <string name="food2_des">본점: 충북 청주시 상당구 성안로 47-1 1층</string>
+    <string name="food3">봉용불고기</string>
+    <string name="food3_des">본점: 충북 청주시 청원구 중앙로 108</string>
+    <string name="food4">남들갈비</string>
+    <string name="food4_des">충북 청주시 서원구 청남로2133번길 8</string>
+    <string name="food5">흥흥제과</string>
+    <string name="food5_des">본점: 충북 청주시 상당구 중앙로 5-3</string>
+
+    <string name="place1">청주고인쇄박물관</string>
+    <string name="place1_des">충북 청주시 흥덕구 직지대로 713 청주고인쇄박물관</string>
+    <string name="place2">청남대</string>
+    <string name="place2_des">충북 청주시 상당구 문의면 청남대길 646 청남대관리사업소</string>
+    <string name="place3">상당산성</string>
+    <string name="place3_des">충북 청주시 상당구 용담.명암.산성동</string>
+    <string name="place4">명암저수지</string>
+    <string name="place4_des">충북 청주시 상당구 용담동 290</string>
+    <string name="place5">대청댐전망대</string>
+    <string name="place5_des">충북 청주시 상당구 문의면 대청호반로 206 현암정휴게소</string>
+
+    <string name="shopping1">지웰시티몰,현대백화점</string>
+    <string name="shopping1_des">충북 청주시 흥덕구 대농로 17</string>
+    <string name="shopping2">청주 NC백화점 터미널점</string>
+    <string name="shopping2_des">충북 청주시 흥덕구 2순환로 1233 드림플러스</string>
+    <string name="shopping3">청주 시내</string>
+    <string name="shopping3_des">충북 청주시 상당구 사직대로 357-5</string>
+
+
+
+
+
+</resources>

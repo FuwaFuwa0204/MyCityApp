@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ArtSpace" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/BusinessCard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ComposeQuadrant" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/ComposeTutorial" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Courses" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DessertClicker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/DiceRoller" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/GreetingCard" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/HappyBirthday" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Lemonade" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/LunchTray" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/MyCityApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Reply" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Sports" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Superheroes" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/TaskManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Unscaramble" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/WellnessApp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/affirmations" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cupcake" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tipCalculator" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/woof" vcs="Git" />
+  </component>
+</project>
