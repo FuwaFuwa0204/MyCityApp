@@ -1,49 +1,34 @@
 package com.example.mycityapp.ui
 
+import androidx.lifecycle.ViewModel
 import com.example.mycityapp.model.MyAppDataFood
-import com.example.mycityapp.model.MyAppDataPlace
-import com.example.mycityapp.model.MyAppDataShopping
 import com.example.mycityapp.model.category
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 
-class MyAppViewModel {
+class MyAppViewModel: ViewModel() {
 
     private val _uiState = MutableStateFlow(MyAppUiState())
     val uiState: StateFlow<MyAppUiState> = _uiState
 
     //model의 클래스 틀
-    fun updateCurrentCategory(category:category){
+    fun updateCurrentCategory(newCategory: category){
+        val previousCategory = uiState.value.currentCategory
         _uiState.update {
-            currentCategory -> currentCategory.copy(
-            currentCategory = category,
-            )
+                previousCategory -> previousCategory.copy(
+            currentCategory = newCategory
+                )
         }
     }
-    fun updateCurrentFood(food:MyAppDataFood){
+    fun updateCurrentItem(newItem:MyAppDataFood){
+        val previousItem = uiState.value.currentItem
         _uiState.update {
-                currentFood -> currentFood.copy(
-            currentFood = food,
-            isShowingHomepage = false
+               previousItem -> previousItem.copy(
+            currentItem = newItem
         )
         }
     }
-    fun updateCurrentPlace(place:MyAppDataPlace){
-        _uiState.update {
-                currentPlace -> currentPlace.copy(
-            currentPlace = place,
-            isShowingHomepage = false
-        )
-        }
-    }
-    fun updateCurrentShopping(shopping:MyAppDataShopping){
-        _uiState.update {
-                currentCategory -> currentCategory.copy(
-            currentShopping = shopping,
-            isShowingHomepage = false
-        )
-        }
-    }
+
 
     }
