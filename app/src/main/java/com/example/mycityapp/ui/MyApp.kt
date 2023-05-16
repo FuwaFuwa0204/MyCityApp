@@ -72,17 +72,24 @@ fun MyApp(
                     }
                 },
                 navigationIcon = {
-                    IconButton(onClick = {
-                        if(navController.previousBackStackEntry != null){
-                            navController.navigateUp()
-                        }
+                    when(currentScreen){
+                        MyAppEnum.Category ->
+                            IconButton(onClick = { }) {
+                            }
+                            else->
+                        IconButton(onClick = {
+                            if(navController.previousBackStackEntry != null){
+                                navController.navigateUp()
+                            }
 
-                    }) {
-                        Icon(
-                            imageVector = Icons.Filled.ArrowBack,
-                            contentDescription = "Localized description"
-                        )
+                        }) {
+                            Icon(
+                                imageVector = Icons.Filled.ArrowBack,
+                                contentDescription = "Localized description"
+                            )
+                        }
                     }
+
                 },
                 actions = {
                     IconButton(onClick = { /* doSomething() */ }) {
