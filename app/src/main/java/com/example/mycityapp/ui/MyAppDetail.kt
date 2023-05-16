@@ -114,7 +114,9 @@ fun detailImage(uiState: MyAppUiState,modifier:Modifier= Modifier){
 @Composable
 fun foodImage(uiState: MyAppDataFood,modifier: Modifier=Modifier) {
 
-    Card(modifier = Modifier, colors = CardDefaults.cardColors(Color.White), elevation = CardDefaults.cardElevation(4.dp)) {
+    Card(modifier = Modifier,
+        colors = CardDefaults.cardColors(Color.White),
+        elevation = CardDefaults.cardElevation(4.dp)) {
     Column(
         modifier = modifier,
         verticalArrangement = Arrangement.Center,
@@ -125,46 +127,67 @@ fun foodImage(uiState: MyAppDataFood,modifier: Modifier=Modifier) {
             contentDescription = null,
             modifier = Modifier
                 .padding(10.dp)
-                .width(200.dp)
-                .height(100.dp)
+                .width(400.dp)
+                .height(400.dp)
         )
-        Spacer(Modifier.height(20.dp))
         Text(stringResource(id = uiState.detail), modifier=Modifier.padding(10.dp))
+        Spacer(Modifier.height(20.dp))
 
     }
 }
 }
 
 @Composable
-fun placeImage(uiState: MyAppDataFood,modifier: Modifier=Modifier){
+fun placeImage(uiState: MyAppDataFood,modifier: Modifier=Modifier) {
 
-    Column(modifier=modifier,
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally){
-        Image(
-            painter= painterResource(id = uiState.image),
-            contentDescription = null,
-            modifier= Modifier
-                .width(200.dp)
-                .height(100.dp))
-        Spacer(Modifier.height(20.dp))
-        Text(stringResource(id = uiState.detail))
+    Card(
+        modifier = Modifier,
+        colors = CardDefaults.cardColors(Color.White),
+        elevation = CardDefaults.cardElevation(4.dp)
+    ) {
+        Column(
+            modifier = modifier,
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Image(
+                painter = painterResource(id = uiState.image),
+                contentDescription = null,
+                modifier = Modifier
+                    .padding(10.dp)
+                    .width(400.dp)
+                    .height(400.dp)
+            )
+            Text(stringResource(id = uiState.detail))
+            Spacer(Modifier.height(20.dp))
+        }
+
     }
-
 }
-
 @Composable
-fun shoppingImage(uiState: MyAppDataFood,modifier: Modifier=Modifier){
+fun shoppingImage(uiState: MyAppDataFood,modifier: Modifier=Modifier) {
 
-    Column(modifier=modifier,
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally){
-        Image(painter= painterResource(id = uiState.image),contentDescription = null,modifier= Modifier
-            .width(200.dp)
-            .height(100.dp))
-        Spacer(Modifier.height(20.dp))
-        Text(stringResource(id = uiState.detail))
+    Card(
+        modifier = Modifier,
+        colors = CardDefaults.cardColors(Color.White),
+        elevation = CardDefaults.cardElevation(4.dp)
+    ) {
+        Column(
+            modifier = modifier,
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Image(
+                painter = painterResource(id = uiState.image), contentDescription = null,
+                modifier = Modifier
+                    .padding(10.dp)
+                    .width(400.dp)
+                    .height(400.dp)
+            )
+            Text(stringResource(id = uiState.detail))
+            Spacer(Modifier.height(20.dp))
+        }
+
     }
-
 }
 

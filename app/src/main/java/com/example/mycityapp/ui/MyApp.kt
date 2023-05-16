@@ -1,9 +1,11 @@
 package com.example.mycityapp.ui
 
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -45,23 +47,39 @@ fun MyApp(
     navController: NavHostController = rememberNavController()
 ){
     val navController = rememberNavController()
-    //val backStackEntry by navController.currentBackStackEntryAsState()
-    //val currentScreen = MyAppEnum.valueOf(
-       // backStackEntry?.destination?.route ?: MyAppEnum.Category.name
-   // )
+    val backStackEntry by navController.currentBackStackEntryAsState()
+    val currentScreen = MyAppEnum.valueOf(
+       backStackEntry?.destination?.route ?: MyAppEnum.Category.name
+    )
+    //state의 최신값
+    val uiState by viewModel.uiState.collectAsState()
 
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(
                 title = {
+                    if(currentScreen == MyAppEnum.Category)
                     Text(
                         stringResource(id = R.string.app_name)
-                    )
+                    )else if(currentScreen == MyAppEnum.Recommend){
+                        Text(
+                            stringResource(id =uiState.currentCategory.category)
+                        )
+                    }else{
+                        Text(
+                            stringResource(id = uiState.currentItem.recommend)
+                        )
+                    }
                 },
                 navigationIcon = {
-                    IconButton(onClick = { /* doSomething() */ }) {
+                    IconButton(onClick = {
+                        if(navController.previousBackStackEntry != null){
+                            navController.navigateUp()
+                        }
+
+                    }) {
                         Icon(
-                            imageVector = Icons.Filled.Menu,
+                            imageVector = Icons.Filled.ArrowBack,
                             contentDescription = "Localized description"
                         )
                     }
@@ -77,7 +95,7 @@ fun MyApp(
             )
         },
         content = { innerPadding ->
-           val uiState by viewModel.uiState.collectAsState()
+
             
             NavHost(
                 navController = navController,
